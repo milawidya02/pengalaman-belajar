@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #0b8600;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.wrapper .ucapan-berjalan {
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+.ucapan-berjalan li {
+  list-style: none;
+  color: white;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 18s steps(6) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -540px;
+  }
+}
+
+.ucapan-berjalan li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+
+.ucapan-berjalan li span::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 120%;
+  width: 100%;
+  background: #0b8600; 
+  border-left: 2px solid white;
+  animation: typing 3s steps(11) infinite;
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  } 
+}
